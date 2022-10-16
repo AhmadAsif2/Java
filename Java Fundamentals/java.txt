@@ -1,0 +1,116 @@
+JAVA
+	Every Java program starts executing with main function
+	Every Java program starts with a class Name. Class Name must be Capital
+	
+public class Main {
+	public static void main() {
+		System.out.println("Hello, World");
+	}
+}
+
+"Packages" are used to group related classes
+///////////////////////////////////////////////////////////////////////////////////////////
+Primitive vs Reference Types
+When using "primitive data type" no need to allocate memory.
+But When Using "Reference Types" we need to allocate memory manually and it will deallocate automatically when the program finishes.
+Reference Types are copied by addresses(new) operator is used
+Primitive values are copied by values and these values are completely independent on each other
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+Strings
+
+Strings in Java are immutable
+
+Strings Method
+startswith();
+wndswith();
+replace();
+length();
+indexof();
+touppercase();
+toLowerCase();
+
+/////////////////////////////////////////////////////////////////////////
+Escape Sequences \n \t \ \\
+
+///////////////////////////////////////////////////////////////////
+Arrays
+Arrays is a collection of same primitive types
+Array size is fixed
+ "Arrays" is Java Collection and It is overloaded
+
+
+//////////////////////////////////////////////////////////////////////
+Multi dimensional Arrays
+
+// Multi Dimensional Array
+//        int[][] numbers1 = new int[2][3];
+//        numbers1[0][1] = 12;
+        int [][] numbers1 = { { 12, 14, 15 }, { 10, 18, 20 } };
+        System.out.println("Multidimensional Array: "+Arrays.deepToString(numbers1));
+
+///////////////////////////////////////////////////////////////////
+Constants
+final specifier is used
+
+/////////////////////////////////////////////////////////////
+Arithematic expressions
++ - / * %
++= -= /= %= (Augmented or Compound Assignment Operators)
+
+//////////////////////////////////////////////////////
+Order of operations
+()
+* /
++ -
+
+//////////////////////////////////////////////
+Casting
+ // Implicit Casting
+        // byte > short > int > long > float > double 
+        double x = 1.1;
+        double result = x + 1;
+        System.out.println(result);
+Explicit casting we manually typecast the value
+
+// String typecasting into int, double, float
+  String test = "1.7";
+        System.out.println(Double.parseDouble(test));
+
+//////////////////////////////////////////
+The Math Class
+// THe Math class
+        int number = (int)Math.round(2.2);
+        System.out.println(number);
+        
+        //int number1 = Math.round(Math.random()*100);
+        int number1 = (int)(Math.random()*100);
+        System.out.println(number1);
+
+/////////////////////////////////////////////
+Formatting numbers
+/////////////// Formatting Numbers ///////////////////
+        NumberFormat currency = NumberFormat.getCurrencyInstance();
+        String result = currency.format(11232.43);
+        System.out.println(result);
+
+
+        ///////////////// Alternative Way /////////////////////
+        String result1 = NumberFormat.getPercentInstance().format(0.234234);
+        System.out.println(result1);
+
+///////////////////////////////////////////////
+//Reading Input
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Age: ");
+        byte age = scanner.nextByte();
+        System.out.println("You are " + age);
+	
+Scanner scanner = new Scanner(System.in);
+        System.out.print("Name: ");
+        String name = scanner.nextLine().trim();
+        System.out.println(name);
+
+/////////////////////////////////////////
+Java Methods are also called functions

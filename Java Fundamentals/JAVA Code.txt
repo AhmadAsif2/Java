@@ -1,0 +1,113 @@
+package com.main;
+
+import java.awt.Point;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+//        System.out.println("Hello, World!");
+        // Primitive Data Types
+        byte age = 30;
+        long viewsCount = 1234_56789_2323L;
+        float price = 10.39F;
+        char letter = 'A';
+        boolean isEligible = false;
+
+        System.out.println(viewsCount);
+        System.out.println(price);
+        System.out.println(isEligible);
+
+        //Reference types
+        Date now = new Date();
+        System.out.println(now);
+
+        Point point1 = new Point(10,20);
+        point1.x = 20;
+        Point point2 = point1;
+        System.out.println(point2);
+        System.out.println("**********************************");
+        // Strings
+        String message = " Hello World" + "!!";
+        System.out.println(message.trim());
+        System.out.println(message);
+
+        // Escape Sequences \ \n \t
+        System.out.println("*********************************");
+        String s1 = "c:\t\\Windows\\...";
+        String s = "\nHello \"World\"";
+        System.out.println(s);
+        System.out.println(s1);
+
+        System.out.println("=============================");
+        // Arrays
+//        int[] numbers = new int[5];
+//        numbers[0] = 10;
+//        numbers[1] = 20;
+
+        int[] numbers = { 18, 8, 9, 15, 99, 91 };
+        System.out.println("Array Length: "+numbers.length); // Java Collection
+        Arrays.sort(numbers);
+        System.out.println(Arrays.toString(numbers));//Array is overloaded
+        System.out.println("===============================");
+
+        // Multi Dimensional Array
+//        int[][] numbers1 = new int[2][3];
+//        numbers1[0][1] = 12;
+        int [][] numbers1 = { { 12, 14, 15 }, { 10, 18, 20 } };
+        System.out.println("Multidimensional Array: "+Arrays.deepToString(numbers1));
+
+//        Constants
+        final float pi = 3.14F;// This is constant we can't change the value
+
+        System.out.println("===================================");
+        int value = (10 + 3)*3;
+        System.out.println(value);
+        System.out.println("===================================");
+
+        // Implicit Casting
+        // byte > short > int > long > float > double
+        double x = 1.1;
+        double result = x + 1;
+        System.out.println(result);
+
+
+        String test = "1.7";
+        System.out.println(Double.parseDouble(test));
+
+        System.out.println("============================");
+        // THe Math class
+        int number = (int)Math.round(2.2);
+        System.out.println(number);
+
+        //int number1 = Math.round(Math.random()*100);
+        int number1 = (int)(Math.random()*100);
+        System.out.println(number1);
+        System.out.println("==============================");
+
+		/////////////// Formatting Numbers ///////////////////
+        NumberFormat currency = NumberFormat.getCurrencyInstance();
+        String result = currency.format(11232.43);
+        System.out.println(result);
+
+
+        ///////////////// Alternative Way /////////////////////
+        String result1 = NumberFormat.getPercentInstance().format(0.234234);
+        System.out.println(result1);
+
+		
+	//Reading Input
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Age: ");
+        byte age = scanner.nextByte();
+        System.out.println("You are " + age);
+
+	Scanner scanner = new Scanner(System.in);
+        System.out.print("Name: ");
+        String name = scanner.nextLine().trim();
+        System.out.println(name);
+        
+    }
+}
+
+
